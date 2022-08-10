@@ -4,6 +4,8 @@
     {
         static void Main(string[] args)
         {
+
+            Console.WriteLine("программа-переводчик");
             var dictionary = new Dictionary<string, string>()
             {
                 ["passion"] = "страсть",
