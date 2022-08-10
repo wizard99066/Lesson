@@ -94,15 +94,60 @@
             }
 
             Console.WriteLine();
+            int sum = 0;
             for (int i = 0; i < first; i++)
             {
                 Console.WriteLine($"наименьший элемент строки номер {i} значение {array[i,second-1]} ");
             }
 
 
+            int MinElement = array [0,0];
+            for (int i=0; i < first; i++)
+            {
+                for (int j=0; j < second; j++)
+                {
+                    if (MinElement>array[i, j])
+                    {
+                        MinElement = array[i, j];
+                    }
+                }
+            }           
+            Console.WriteLine($"выведем минимальный элемент массива  {MinElement}");
 
+            int MaxElement = array[0, 0];
+            for (int i = 0; i < first; i++)
+            {
+                for (int j = 0; j < second; j++)
+                {
+                    if (MaxElement < array[i, j])
+                    {
+                        MaxElement = array[i, j];
+                    }
+                }
+            }
+            Console.WriteLine($"выведем максимальный элемент массива {MaxElement}");
+            for (int i = 0; i < first; i++)
+            {
+                for (int j = 0; j < second; j++)
+                {
+                    sum += array[i, j];
+                }
+                Console.WriteLine($"сумма значений в строке {i} равна {sum}" );
+                sum = 0;
+            }
+            int totalAmount = 0;
+            for (int i=0;i<first; i++)
+            {
+                for (int j=0;j<second; j++)
+                {totalAmount+=array[i, j];
+                }
+               
+            } Console.WriteLine($"общая сумма {totalAmount}");
+            var arithmeticMean2 = 0;
+               arithmeticMean2 = totalAmount/(first*second);
+            Console.WriteLine($"среднеарифметическое {arithmeticMean2} ");
 
-
+            Console.ReadKey();
 
 
 
